@@ -12,7 +12,7 @@ const logger = pino({
 
 const pb = new PocketBase(process.env.POCKETBASE_URL);
 
-pb.admins.authWithPassword('myemail@email.com', '1234567890')
+pb.admins.authWithPassword('hipomotgames@gmail.com', 'JRKvqoDpl33bH5MflqrYMVbjNr1S8K7v')
   .then(authData => {
     logger.info('Authentication successful');
   })
