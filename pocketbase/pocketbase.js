@@ -10,14 +10,14 @@ const logger = pino({
   }
 })
 
-const pb = new PocketBase(process.env.POCKETBASE_URL);
+const pb = new PocketBase(process.env.POCKETBASE_URL)
 
 pb.admins.authWithPassword('hipomotgames@gmail.com', 'JRKvqoDpl33bH5MflqrYMVbjNr1S8K7v')
   .then(authData => {
-    logger.info('Authentication successful');
+    logger.info('Authentication successful')
   })
   .catch(error => {
-    logger.error("Failed to init PocketBase or authenticate", error);
-  });
+    logger.error("Failed to init PocketBase or authenticate", error)
+  })
 
-module.exports = { pb };
+module.exports = { pb }

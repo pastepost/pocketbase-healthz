@@ -13,14 +13,12 @@ const logger = pino({
 
 router.get('/', async (req, res) => {
     try {
-      const records = await pb.collection('healthz').getFullList({
-          sort: '-created',
-      });
-      res.json(records);
+      const records = await pb.collection('healthz').getFullList()
+      res.json(records)
     } catch (error) {
-        logger.error(error);
-        res.status(500).send("Internal error");
+        logger.error(error)
+        res.status(500).send("Internal error")
     }
-});
+})
 
-module.exports = router;
+module.exports = router
