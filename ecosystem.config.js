@@ -4,7 +4,7 @@ module.exports = {
         script : "pnpm start",
         env_production: {
             NODE_ENV: "production",
-            POCKETBASE_URL: "http://10.114.0.3:8090"
+            POCKETBASE_URL: "http://10.114.0.2"
         }
     }]
 }
